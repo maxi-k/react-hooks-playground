@@ -1,28 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { useState} from 'react';
 import './App.css';
 
-class App extends Component {
-  render() {
+const App = () => {
+    const [name, setName] = useState('')
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <div className="App">
+          <header className="App-header">
+            Wie heißt die Mutter von
+            <input value={name} onChange={(event) => setName(event.target.value)} />
+            ?
+            <p className="mama">
+              {name &&
+               name.split(' ').length > 1 &&
+               (name.split(' ').length > 2 || name[name.length - 1] !== ' ') &&
+               "Mama L" + name.split(' ')[1].substring(1)}
+            </p>
+          </header>
+        </div>
     );
-  }
 }
 
 export default App;

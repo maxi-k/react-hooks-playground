@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+input {
+    font-size: 1.0em;
+    padding: 7px;
+}
+
+p.mama {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -15,7 +25,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(50px + 2vmin);
   color: white;
 }
 
